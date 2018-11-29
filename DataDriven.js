@@ -19,10 +19,9 @@ describe('protractor baby steps',function(){
     		
 it('Calculator: '+description,function(){
 	console.log(description);
-	//browser.get('https://angularjs.org');
-	//browser.get(cal.url);
 	
-	//element(by.css("select[model='first']")).sendKeys(400);
+	
+	
 	//Using first value for first input
 	cal.firstvalue.sendKeys(value.inp1);
 	

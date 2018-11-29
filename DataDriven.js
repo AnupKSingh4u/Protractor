@@ -23,8 +23,10 @@ it('Calculator: '+description,function(){
 	//browser.get(cal.url);
 	
 	//element(by.css("select[model='first']")).sendKeys(400);
+	//Using first value for first input
 	cal.firstvalue.sendKeys(value.inp1);
 	
+	//Using second value for first input
 	cal.secondvalue.sendKeys(value.inp2);
 	
 	element(by.id("gobutton")).click();

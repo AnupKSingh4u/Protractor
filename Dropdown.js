@@ -25,7 +25,9 @@ describe('protractor:-dropdown handling',function(){
 		})
 
 		element(by.model("second")).sendKeys(b);
-		element(by.id("gobutton")).click();
+		element(by.id("gobutton")).click().then(function(){
+			console.log("this is master branch for your attention!")
+		})
 		
 	}	
 	

@@ -26,8 +26,7 @@ describe('protractor:-dropdown handling',function(){
 
 		element(by.model("second")).sendKeys(b);
 		element(by.id("gobutton")).click().then(function(){
-			console.log("test git branching")
-			console.log("Attention! you are in Develop branch")
+		console.log("Attention! you are in Develop branch")
 		})
 		
 	}	

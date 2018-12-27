@@ -4,18 +4,39 @@ exports.config = {
 		directConnect: true,
 // seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['DataDriven.js'],
+  
+  
+//  Capabilities: 
+//	  {
+//	    browserName: 'firefox',
+//	    firefoxOptions: {
+//	      args: ['--headless']
+//	    },
+//	   
+  
+  
   capabilities: {
-	 //'browserName': 'chrome',
+	 'browserName': 'chrome',
 	  //'browserName': 'internet explorer',
-	 'browserName': 'firefox',
+	 //'browserName': 'firefox',
+	 
+	    chromeOptions: {
+	       // binary: '/Users/guymograbi/Downloads/chrome-mac/Chromium.app/Contents/MacOS/Chromium',
+	        args: ['--headless','--disable-gpu','--window-size=800,600--']
+	      }
   },
 
   onPrepare: function() {
       jasmine.getEnv().addReporter(
         new Jasmine2HtmlReporter({
-          savePath: 'target/screenshots'
+        	fileName: 'MyReportName',        	
+        	//cleanDestination: true,        	
+          savePath: './target/Reports',
+          fixedScreenshotName: true
+        	  
         })
       );
+      
    },
    
    suites:
@@ -27,6 +48,9 @@ exports.config = {
 	
   jasmineNodeOpts: {
 	    showColors: true, // Use colors in the command line report.
+	    
 	  }
+ 
+   
   
 };

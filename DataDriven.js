@@ -1,11 +1,11 @@
 
 
-describe('protractor baby steps',function(){
+describe('Learn DataDriven Testing',function(){
 	var cal=require("./Locators.js")
 	var d= require("./data.js")
 	var using = require('jasmine-data-provider');
 	
-	it('launching application',function(){
+	it('launching Calculator',function(){
 		cal.launchApp(cal.url);
 		var EC = protractor.ExpectedConditions;
 		// Waits for the element with id 'abc' to be visible on the dom.
@@ -17,7 +17,7 @@ describe('protractor baby steps',function(){
     using(d.DataSet, function (value, description) {
     	
     		
-it('Calculator: '+description,function(){
+it('Calculation: '+description,function(){
 	console.log(description);
 	
 	
@@ -36,13 +36,14 @@ it('Calculator: '+description,function(){
 	
 	//to.Be is for comparing one value with another value.
 	expect(element(by.css("h2[class='ng-binding']")).getText()).toBe(value.result);
-	expect(element(by.css("h2[class='ng-binding']")).getText()).toBe(value.result);
+	//expect(element(by.css("h2[class='ng-binding']")).getText()).toBe(value.result);
 	//to.Match will give true if any of the character/number from retrieved value is matching.
 	//expect(element(by.css("h2[class='ng-binding']")).getText()).toMatch("3");
 	element(by.css("h2[class='ng-binding']")).getText().then(function(text) {
 		
 		console.log('.....Retrieving result......');
 		console.log("Add sum of two values is: "+text);
+		console.log("Expected value is: "+value.result);
 		//console.log('Execution completed successfully');
 		
 	})

@@ -3,7 +3,9 @@ var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 exports.config = {
 		directConnect: true,
 // seleniumAddress: 'http://localhost:4444/wd/hub',
+  //specs: ['DataDriven.js'],
   specs: ['DataDriven.js'],
+ //specs: ['Dropdown.js'],
   
   
 //  Capabilities: 
@@ -22,11 +24,12 @@ exports.config = {
 	 
 	    chromeOptions: {
 	       // binary: '/Users/guymograbi/Downloads/chrome-mac/Chromium.app/Contents/MacOS/Chromium',
-	        args: ['--headless','--disable-gpu','--window-size=800,600--']
+	       args: ['--headless','--disable-gpu','--window-size=800,600--']
 	      }
   },
 
   onPrepare: function() {
+    
       jasmine.getEnv().addReporter(
         new Jasmine2HtmlReporter({
         	fileName: 'MyReportName',        	

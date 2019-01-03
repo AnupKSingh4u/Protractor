@@ -2,11 +2,6 @@
   "name": "ProtractorFramework",
   "dependencies": {
     "jasmine-data-provider": "2.2.0",
-    "karma": "3.1.4",
-    "karma-cli": "latest",
-    "karma-jasmine": "latest",
-    "karma-phantomjs-launcher--save-dev": "latest",
-    "karma-requirejs": "^1.1.0",
     "protractor": "^5.3.0",
     "protractor-jasmine2-html-reporter": "0.0.7"
   },
